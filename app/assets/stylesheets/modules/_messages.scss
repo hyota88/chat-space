@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+$side-font: #ffffff;
+$btn-colar: #38aef0;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+
+.side-bar  {
+  width: 300px;
+  background-color: #253141;
+  color: $side-font;
+  &__header {
+    height: 100px;
+    font-size: $fontSizeLarge;
+    &__items {
+      line-height: 100px;
+      @include flex;
+      justify-content: space-between;
+      padding: 0 20px ;
+      &__icons {
+        width: 60px;
+        text-align: right;
+        color: $side-font;
+        text-decoration: none;
+        &--edit {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  &__groups-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px;
+    color: $side-font;
+    font-weight: bold;
+    .group {
+      &-name{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &-info{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}    
+
+.chat-main {
+  width: calc(100vw - 300px);
+  background-color: $side-font;
+  &__group-info {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+      .group-name {
+      font-size: 20px;
+      color: #333333;
+      padding: 35px 40px ;
+    }
+        .group-member {
+        font-size: 12px;
+        color: #999999;
+        margin-top: 15px;
+      }
+      .edit-btn{
+        width: 72px;
+        height: 40px;
+        margin: 28px 40px;
+        color: $btn-colar;
+        border: solid 1px;
+        @include flex;
+        a{
+          font-size: $fontSizeLarge;
+          color: $btn-colar;
+          text-decoration: none;
+          padding: 0 20px ;
+        }
+      }
+  }
+  &__message-list {
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 35px 0 0 40px;
+    .name-box {
+      // padding: 35px 0 12px; 
+      display: flex;
+      justify-content: left;
+      .send-name {
+        font-size: $fontSizeLarge;
+        color: #333333;
+        padding-bottom: 12px;
+      }
+      .send-date {
+        font-size: 12px;
+        color: #999999;
+        margin-left: 10px;
+      }
+    }
+      .send-message {
+        font-size: 14px;
+        color: #434A54;
+        padding-bottom: 46px;
+      }
+  }
+  &__form {
+    height: 90px;
+    background-color: #d2d2d2;
+    @include flex;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+    &__box {
+      width: 100%;
+      height: 50px;
+      background-color: $side-font;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &__sentence{
+        width: 100vh;
+        padding-left: 10px;
+        border: none;
+      }
+      &__image{
+        line-height: 50px;
+        font-size: 1.3em;
+        padding-right: 10px;
+        position: absolute;
+        right: 0;
+        input{display: none;
+        }
+      }
+    }
+    &__btn{
+      width: 100px;
+      height: 50px;
+      margin-left: 15px;
+      background-color: $btn-colar;
+      text-align: center;
+      cursor: pointer;
+      a{
+        line-height: 50px;
+        text-decoration: none;
+        color: $side-font;
+      }
+    }
+  }
+}

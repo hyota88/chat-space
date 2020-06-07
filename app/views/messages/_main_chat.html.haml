@@ -1,0 +1,32 @@
+.chat-main
+  .chat-main__group-info
+    .group-name
+      グループ名
+      .group-member
+        Menber :
+    .edit-btn
+      %a{href: '#'}Edit
+  .chat-main__message-list
+    .name-box
+      .send-name
+        %b name 
+      .send-date
+        2020/06/06(Sut) 03:32:09
+    .send-message
+      おはよう！
+    .name-box
+      .send-name
+        %b mame
+      .send-date
+        2020/06/07(Sun) 03:32:09
+    .send-message
+      こんばんは！
+  .chat-main__form
+    .chat-main__form__box   
+      %input.chat-main__form__box__sentence{name:"name", placeholder:"type a message", type:"text", value:""}
+      .chat-main__form__box__image
+        %label{class: "chat-main__form__box__image"}
+          = icon('far', 'image')
+          %input{type: "file"}
+    .chat-main__form__btn
+      %a{href: "#"}Send
