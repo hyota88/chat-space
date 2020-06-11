@@ -19,15 +19,18 @@ $btn-colar: #38aef0;
 .side-bar  {
   width: 300px;
   background-color: #253141;
-  color: $side-font;
   &__header {
     height: 100px;
     font-size: $fontSizeLarge;
+    color: $side-font;
     &__items {
       line-height: 100px;
       @include flex;
       justify-content: space-between;
       padding: 0 20px ;
+      &__name{
+          font-weight: bold;
+      }
       &__icons {
         width: 60px;
         text-align: right;
@@ -45,8 +48,11 @@ $btn-colar: #38aef0;
     background-color: #2f3e51;
     padding: 20px 20px;
     color: $side-font;
-    font-weight: bold;
     .group {
+      a{
+        text-decoration: none;
+        color: $side-font;
+      }
       &-name{
         font-size: 15px;
         padding-bottom: 5px;
