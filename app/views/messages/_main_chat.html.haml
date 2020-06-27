@@ -1,10 +1,12 @@
 .chat-main
   .chat-main__group-info
-    .group-name
-      = @group.name
-      - @group.users.each do |user|
-        .group-member
-          = user.name
+    .group-box
+      .group-name
+        = @group.name
+      .group-menbers
+        - @group.users.each do |user|
+          .group-member
+            =user.name
     .edit-btn
       = link_to "Edit", edit_group_path(@group) 
   .messages

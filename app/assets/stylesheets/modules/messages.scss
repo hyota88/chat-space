@@ -2,9 +2,20 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+} 
+
+body {
+  width: 100%;
+  height: 100%;
+} 
+
+
 .wrapper {
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 $side-font: #ffffff;
@@ -66,40 +77,54 @@ $btn-colar: #38aef0;
 }    
 
 .chat-main {
+  height: 100%;
   width: calc(100vw - 300px);
   background-color: $side-font;
   &__group-info {
     height: 100px;
     display: flex;
     justify-content: space-between;
-      .group-name {
+    .group-box {
+      height: 100px;
+      padding: 0px 20px;
+    }
+    .group-name {
+      height: 60px;
+      line-height: 100px;
       font-size: 20px;
       color: #333333;
-      padding: 35px 40px ;
     }
-        .group-member {
-        font-size: 12px;
-        color: #999999;
-        margin-top: 15px;
-      }
-      .edit-btn{
-        width: 72px;
-        height: 40px;
-        margin: 28px 40px;
+    .group-menbers{
+      margin: 10px 10px 0 0;
+      display: flex;
+    }
+    .group-member {
+      font-size: 12px;
+      color: #999999;
+      margin-right: 5px;
+      // margin-top: 15px;
+      // display: inline-block;
+    }
+    .edit-btn{
+      width: 72px;
+      height: 40px;
+      margin: 28px 40px;
+      color: $btn-colar;
+      border: solid 1px;
+      @include flex;
+      a{
+        font-size: $fontSizeLarge;
         color: $btn-colar;
-        border: solid 1px;
-        @include flex;
-        a{
-          font-size: $fontSizeLarge;
-          color: $btn-colar;
-          text-decoration: none;
-          padding: 0 20px ;
-        }
+        text-decoration: none;
+        padding: 0 20px ;
       }
+    }
   }
-  &__message-list {
-    height: calc(100vh - 100px - 90px);
+  .messages {
+    height: calc(100% - 100px - 90px);
     background-color: #fafafa;
+  }
+  &__message-list {    
     padding: 35px 0 0 40px;
     .name-box {
       display: flex;
@@ -118,7 +143,7 @@ $btn-colar: #38aef0;
       .send-message {
         font-size: 14px;
         color: #434A54;
-        padding-bottom: 46px;
+        padding-bottom: 10px;
       }
   }
   .form {
@@ -126,6 +151,7 @@ $btn-colar: #38aef0;
     width: 100%;
     height: 90px;
     padding: 20px 40px;
+    float: left;
     // display: flex;
     &__message {
       width: calc(100% - 200px);
@@ -145,16 +171,6 @@ $btn-colar: #38aef0;
         background-color:#ffffff;
         input{display: none;}
         position: relative
-        // .icon {
-        //   position: absolute;
-        //   top: 0;
-        //   right: 0;
-        //   bottom: 0;
-        //   left: 0;
-        //   margin: auto;
-        //   height: 50px;
-        //   width: 50px;
-        // }
       }
     }
   }
@@ -172,48 +188,3 @@ $btn-colar: #38aef0;
     }
   }
 }
-
-
-    // form__submit {
-    //   width: 100px;
-    //   height: 50px;
-    //   margin-left: 15px;
-    //   background-color: $btn-colar;
-    //   text-align: center;
-    //   cursor: pointer;
-    //   a{
-    //     line-height: 50px;
-    //     text-decoration: none;
-    //     color: $side-font;
-    //   }
-    // }
-// position: relative;
-//     line-height: 50px;
-//     .form__text {
-//       height: 50px;
-//       width: calc(100% - 45px);
-//       font-size: 16px;
-//       padding: 0
-//        15px;
-//       color: #434a54;
-//       border-style: none;
-//     }
-//     .form__image {
-//       input {display: none;}
-//       position: absolute;
-//       right: 15px;
-//     }
-//   }
-//   .form__submit {
-//     width: 100px;
-//     height: 50px;
-//     margin-left: 15px;
-//     background-color: $btn-colar;
-//     text-align: center;
-//     cursor: pointer;
-//       a{
-//         line-height: 50px;
-//         text-decoration: none;
-//         color: $side-font;
-//       }
-//    }
