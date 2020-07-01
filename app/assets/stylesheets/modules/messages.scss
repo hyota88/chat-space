@@ -123,6 +123,7 @@ $btn-colar: #38aef0;
   .messages {
     height: calc(100% - 100px - 90px);
     background-color: #fafafa;
+    overflow: scroll;
   }
   &__message-list {    
     padding: 35px 0 0 40px;
